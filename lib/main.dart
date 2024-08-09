@@ -12,18 +12,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: ListView(
-            shrinkWrap: true,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 300,
-                  color: Colors.orange,
-                ),
-              )
-            ],
-          ),
+          child: ListView.builder(
+              itemCount: 3,
+              itemBuilder: (context, index) => Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 100,
+                      color: Colors.red,
+                    ),
+                  )),
         ),
       ),
     );
